@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <title>Introduction</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/mycss.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="lib/angular.min.js"></script>
+</head>
+<body ng-app="eMovies">
+    <!--<div ng-controller="registerCtrl">
+        <h1>First Name:<input ng-model="firstName"/></h1>
+        <h1>Last Name:  <input ng-model="lastName"></h1>
+        <span ng-show="showFullName">
+            Full Name:  {{firstName + lastName}}</span>
+        <button ng-click="clickButton()">Click Me</button>
+    </div>-->
+
+    <div ng-controller="moviesCtrl">
+
+        <div id="txtInput">
+            <input id="inp" type="text" ng-model="searchCriteria;" placeholder="Enter text to search"/>
+        </div>
+        <div id="parallel1">
+    <table class="table table-striped">
+        <thead>
+             <tr>
+                 <th class="col-md-2">Name</th>
+                 <th class="col-md-2">Occupation</th>
+                 <th class="col-md-2;">Company</th>
+                 <th class="col-md-2;">latitude</th>
+             </tr>
+        </thead>
+
+        <tbody>
+            <tr ng-repeat="movie in id|filter:searchCriteria" ng-click="displayDescription(movie)">
+                <td class="col-md-2">{{movie.firstName +" "+movie.surname }}</td>
+                <td class="col-md-2">{{movie.occupation}}</td>
+                <td class="col-md-2">{{movie.company}}</td>
+                <td class="col-md-2">{{movie.latitude}}</td>
+            </tr>
+        </tbody>
+
+    </table>
+      </div>
+
+        <div id="parallel2" ng-show="showResult">
+            <h3>
+                {{showResult.firstName +" "+showResult.surname }}
+            </h3>
+            <img src="{{showResult.portrait}}" alt="images" id="bg"; >
+            <br><br><br><br><br><br><br><br><br><br>
+            <h4>Occupation - {{showResult.occupation}}</h4>
+            <p>Company - {{showResult.company}}</p>
+            <p>motto - {{showResult.motto}}</p>
+            <p>latitude - {{showResult.latitude}}</p>
+        </div>
+
+    <!--Description should go here-->
+</div>
+    <script src="app/main.js"></script>
+    <script src="app/controller/moviesCtrl.js"></script>
+
+</body>
+</html>

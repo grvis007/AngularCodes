@@ -1,0 +1,45 @@
+#res{
+    border: solid 2px ;
+    height: 300px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+#bg{
+
+    height: 200px;
+    width:200px ;
+    display: inline;
+    float: left
+}
+
+#parallel1{
+
+    margin-top: 25px;
+    margin-left: 50px;
+    height: 300px;
+    width: 650px;
+    float: left;
+
+    overflow: auto;
+
+}
+
+#parallel2{
+    margin-right: 200px;
+    border: solid 1px;
+    height: 400px;
+    width: 350px;
+    float: right;
+}
+
+#txtInput{
+    margin-left: 50px;
+    margin-top: 160px;
+
+}
+#inp{
+    width: 652px;
+}
+
+

@@ -1,0 +1,22 @@
+
+ [
+    {
+      "id":1,
+    "firstName":"Kiran",
+    "lastName":"PVS",
+    "dob":"18/12/1988",
+    "location":"IN",
+    "phone":"1234567890"},
+  {"id":2,
+    "firstName":"krishna",
+    "lastName":"PVS",
+    "dob":"18/12/1988",
+    "location":"IN",
+    "phone":"1234567891"},
+  {"id":3,
+    "firstName":"John",
+    "lastName":"Pal",
+    "dob":"18/12/1998",
+    "location":"UK",
+   "phone":"1234567892"}
+]

@@ -1,0 +1,15 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h1 class="panel-title" ><a href="">{{myUserName}}</a>
+            <input type="text" ng-model="myUserName"></h1>
+    </div>
+    <div class="panel-body">
+        <div>
+            <label ng-bind="myUserName"></label>
+        </div>
+        <textarea class="input-control" ng-model="myContent">
+
+        </textarea>
+    </div>
+    <button class="btn btn-primary" ng-click="myClick()">Click Me</button>
+</div>

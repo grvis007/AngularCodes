@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <title>Introduction</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="Vendor/angular.min.js"></script>
+</head>
+<body ng-app="eMovies">
+    <!--<div ng-controller="registerCtrl">
+        <h1>First Name:<input ng-model="firstName"/></h1>
+        <h1>Last Name:  <input ng-model="lastName"></h1>
+        <span ng-show="showFullName">
+            Full Name:  {{firstName + lastName}}</span>
+        <button ng-click="clickButton()">Click Me</button>
+    </div>-->
+<div ng-controller="moviesCtrl">
+    <table class="table table-hover" >
+        <thead>
+        <tr>
+            <th>S.No</th>
+            <th>Movie</th>
+            <th>Language</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="movie in movies">
+            <td>{{$index+1}}</td>
+            <td>{{movie.language}}</td>
+            <td>{{movie.movieName}}</td>
+            <td>
+                <button ng-click="showDetails(movie)">Edit</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <div>
+        <p>
+            <img src="{{selectedMovie.src}}" alt="images">
+            <h3>{{selectedMovie.mveDescription}}</h3>
+        </p>
+
+    </div>
+
+    <!--Description should go here-->
+</div>
+
+<script src="app/main.js"></script>
+<script src="app/controllers/registerCtrl.js"></script>
+    <script src="app/controllers/moviesCtrl.js"></script>
+    <script src="app/Factories/movieFactory.js"></script>
+
+
+</body>
+</html>
